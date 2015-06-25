@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+	<!-- 使用 less 的時候就必須要加這行，注意路徑是否正確 -->
+	<link rel="stylesheet/less" type="text/css" href="css/less/bootstrap.less">
+	<title>bootstrap practice</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- JavaScript 使用 Menu Queries 的 lib -->
+	<script src="js/enquire.js"></script>
+
+	<!-- 使用 less要加的 lib -->
+	<script src="js/less.min.js"></script>
+</head>
+<body>
+<div class="container">
+<!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+
+  	<ul class="nav nav-pills" role="tablist">
+      <li role="presentation" class="active"><a href="#">Regular link</a></li>
+      <li role="presentation" class="dropdown">
+        <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+          <span class="caret"></span>
+        </a>
+        <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+      <li role="presentation" class="dropdown">
+        <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+          <span class="caret"></span>
+        </a>
+        <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+      <li role="presentation" class="dropdown">
+        <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+          <span class="caret"></span>
+        </a>
+        <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+
+  <!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+	  Launch demo modal
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        ...
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+  <pre>WECEJ3JKNF239IWQND2390DWKLDFNSALFNWOPFLEFNF9320F32ODFWLKEDM23OP0DF23WDLKSAF230OF932DFSALGNESWALKGNWEIGF3IFBEKJbgfwebglegubqglq4gb934gr vqubvqigahglg349834f9834fsalkgnbsakng34ofaslkeng3ogi34ifjeqwno;ino;i3oif3nfi3o4fn343432953nr923fn32if239ifweklfn	pfHPNGKWGO3GNLWNG;GING3O4IG3OGFNSLEDKNGFDSLKGWELIG3OIG34G43IO4383409F3KFLSEFNSDKGrbrbrebervewECNWECUIEWEWCEWC
+  </pre>
+  </div>
+  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+</div>
+</body>
+</html>
+
+
+<script type="text/javascript">
+	enquire.register("screen and (max-width:45em)", {
+
+    // OPTIONAL
+    // If supplied, triggered when a media query matches.
+    match : function() {
+    	var content = '<div style="width:30px;height:30px; border:1px solid red;"></div>';
+    	$('div.col-xs-6 , .col-md-4').html(content);
+    },
+
+    // OPTIONAL
+    // If supplied, triggered when the media query transitions
+    // *from a matched state to an unmatched state*.
+    unmatch : function() {
+    	var content = '<div style="width:130px;height:130px; border:1px solid blue;"></div>';
+    	$('div.col-xs-6 , .col-md-4').html(content);
+    },
+
+    // OPTIONAL
+    // If supplied, triggered once, when the handler is registered.
+    setup : function() {
+    	$('div.col-xs-6 , .col-md-4').html('setup');
+    },
+
+    // OPTIONAL, defaults to false
+    // If set to true, defers execution of the setup function
+    // until the first time the media query is matched
+    deferSetup : true,
+
+    // OPTIONAL
+    // If supplied, triggered when handler is unregistered.
+    // Place cleanup code here
+    destroy : function() {
+    	$('div.col-xs-6 , .col-md-4').html('destroy');
+    }
+
+});
+
+</script>
