@@ -1,0 +1,110 @@
+#abgne-block-20120804 {
+	width: 900px;	/* 圖片寬度 + 縮圖寬度 + 間隔 8px */
+	height: 300px;	/* 圖片高度 */
+	/*padding: 6px 10px;*/
+	margin: auto;
+	position: relative;
+	border: 1px solid #ccc;
+}
+#abgne-block-20120804 ul, #abgne-block-20120804 li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#abgne-block-20120804 img {
+	border: none;
+}
+#abgne-block-20120804 .photo {
+	width: 450px;	/* 圖片寬度 */
+	height: 300px;	/* 圖片高度 */
+	position: absolute;
+}
+#abgne-block-20120804 .desc-block {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 450px;	/* 圖片寬度 */
+	height: 32px;
+}
+#abgne-block-20120804 .desc-bg, #abgne-block-20120804 .desc-title {
+	position: absolute;
+	width: 430px;	/* 圖片寬度 - padding * 2 */
+	background: #000;
+	top: 0;
+	height: 24px;
+	padding: 4px 10px;
+}
+#abgne-block-20120804 .desc-title {
+	color: #fff;
+	background: none;
+	line-height: 24px;
+}
+#abgne-block-20120804 #playPause-btn {	/* 播放/暫停鈕 */
+	position: absolute;
+	display: block;
+	right: 5px;
+	bottom: 5px;
+	width: 21px;
+	height: 21px;
+	width: 21px;
+	height: 21px;
+	text-indent: -999px;
+}
+#abgne-block-20120804 .playPause-btn-play {
+	background: url(../images/sprite.png) no-repeat -21px 0px;
+}
+#abgne-block-20120804 .playPause-btn-pause {
+	background: url(../images/sprite.png) no-repeat 0px 0px;
+}
+#abgne-block-20120804 .thumbs {
+	width: 94px;
+	height: 288px;	/* 圖片高度 - padding-top */
+	padding-top: 12px;
+	right: 10px;
+	position: absolute;
+}
+#abgne-block-20120804 .carousel {
+	height: 280px;
+	position: relative;
+	overflow: hidden;
+}
+#abgne-block-20120804 .carousel .nav-bar {	/* 當被點選時，縮圖左邊的顏色 */
+	float: left;
+	width: 2px;
+	height: 63px;
+	margin-right: 2px;
+}
+#abgne-block-20120804 .carousel img {
+	float: left;
+	width: 90px;
+	height: 63px;
+}
+#abgne-block-20120804 .carousel ul {
+	position: absolute;
+}
+#abgne-block-20120804 .carousel li {
+	width: 94px;
+	height: 72px;
+}
+#abgne-block-20120804 .carousel .current .nav-bar {
+	background: #007acc;
+}
+#abgne-block-20120804 .thumbs .prev, #abgne-block-20120804 .thumbs .next {	/* 縮圖上下的控制鈕 */
+	position: absolute;
+	left: 43px;
+	width: 12px;
+	height: 0px;
+	padding-top: 6px;
+	overflow: hidden;
+	display: block;
+	cursor: pointer;
+	background: url(../images/sprite.png) no-repeat 0 0;
+}
+#abgne-block-20120804 .thumbs .prev {
+	top: 0px;
+	background-position: 0 -21px;
+}
+#abgne-block-20120804 .thumbs .next {
+	bottom: -2px;
+	background-position: 0 -27px;
+}

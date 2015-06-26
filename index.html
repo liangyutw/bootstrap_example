@@ -6,135 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="css/banner_effect.css">
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
-	<!-- 使用 less 的時候就必須要加這行，注意路徑是否正確 -->
-	<link rel="stylesheet/less" type="text/css" href="css/less/bootstrap.less">
+	<!-- 開發模式才使用。使用 less 的時候就必須要加這行，注意路徑是否正確 -->
+	<!-- <link rel="stylesheet/less" type="text/css" href="css/less/bootstrap.less"> -->
+	<!-- 開發模式才使用。使用 less要加的 lib -->
+	<script>
+	  less = {
+	    env: "development",
+	    async: false,
+	    fileAsync: false,
+	    poll: 1000,
+	    functions: {},
+	    dumpLineNumbers: "comments",
+	    relativeUrls: false,
+	    rootpath: ":"
+	  };
+	  less.watch();
+	</script>
+	<!-- // <script src="js/less.min.js"></script> -->
+
 	<title>bootstrap practice</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="js/bootstrap.min.js"></script>
-
-	<!-- JavaScript 使用 Menu Queries 的 lib -->
-	<script src="js/enquire.js"></script>
-
-	<!-- 使用 less要加的 lib -->
-	<script src="js/less.min.js"></script>
 </head>
 <body>
-<div class="container">
-<!-- Stack the columns on mobile by making one full-width and the other half-width -->
-<div class="row">
-  <div class="col-xs-12 col-md-8">
+	<div class="container">
 
-  	<ul class="nav nav-pills" role="tablist">
-      <li role="presentation" class="active"><a href="#">Regular link</a></li>
-      <li role="presentation" class="dropdown">
-        <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-          <span class="caret"></span>
-        </a>
-        <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-      <li role="presentation" class="dropdown">
-        <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-          <span class="caret"></span>
-        </a>
-        <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-      <li role="presentation" class="dropdown">
-        <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-          <span class="caret"></span>
-        </a>
-        <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </li>
-    </ul>
 
-  <!-- Button trigger modal -->
-	<button type="button" class="btn btn-link" data-toggle="modal" data-target="#myModal">
-	  popup
-	</button>
+		<div id="abgne-block-20120804">
+		<div class="photo">
+			<a href="#">
+				<img src="images/dsc_0342.jpg" alt="第一張圖片">
+				<!-- <div class="desc-block">
+					<div class="desc-bg"></div>
+					<div class="desc-title">每一個都讓人流口水的義式麵包</div>
+				</div>-->
+			</a>
+		</div>
+		<div class="thumbs">
+			<div class="carousel">
+				<ul>
+					<li><a href="#"><img src="images/dsc_0342.jpg" alt="每一個都讓人流口水的義式麵包" title="每一個都讓人流口水的義式麵包"></a></li>
+					<li><a href="#"><img src="images/dsc_0385.jpg" alt="用來垃圾分類的綠寶、白寶、黃寶及藍寶" title="用來垃圾分類的綠寶、白寶、黃寶及藍寶"></a></li>
+					<li><a href="#"><img src="images/dsc_0424.jpg" alt="龐貝城中用來表演用的露天劇場" title="龐貝城中用來表演用的露天劇場"></a></li>
+					<li><a href="#"><img src="images/dsc_0535.jpg" alt="龐貝城中用來祭祀用的神壇" title="龐貝城中用來祭祀用的神壇"></a></li>
+					<li><a href="#"><img src="images/dsc_0595.jpg" alt="Hotel Pazziella 的外觀" title="Hotel Pazziella 的外觀"></a></li>
+					<li><a href="#"><img src="images/dsc_0575.jpg" alt="我來到一個島叫做卡不里島" title="我來到一個島叫做卡不里島"></a></li>
+					<li><a href="#"><img src="images/dsc_0952.jpg" alt="在蘇連多的俏皮神像" title="在蘇連多的俏皮神像"></a></li>
+					<li><a href="#"><img src="images/dsc_1882.jpg" alt="在艾曼紐二世迴廊中的可憐公牛" title="在艾曼紐二世迴廊中的可憐公牛"></a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
 
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-	      </div>
-	      <div class="modal-body">
-	        ...
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
-	      </div>
-	    </div>
-	  </div>
+		<!-- <p></p> -->
+		<div class="im-centered">
+			<div class="col-xs-6 col-md-3"><img src="images/dsc_0342.jpg" width="200px" height="300px">
+			<pre>ecvewveefewqr32rfsavsdveveverv</pre>
+			</div>
+			<div class="col-xs-6 col-md-3"><img src="images/dsc_0342.jpg" width="200px" height="300px">
+			<pre>ecvewveefewqr32rfsavsdveveverv</pre>
+			</div>
+			<div class="col-xs-6 col-md-3"><img src="images/dsc_0342.jpg" width="200px" height="300px">
+			<pre>ecvewveefewqr32rfsavsdveveverv</pre>
+			</div>
+			<div class="col-xs-6 col-md-3"><img src="images/dsc_0342.jpg" width="200px" height="300px">
+			<pre>ecvewveefewqr32rfsavsdveveverv</pre>
+			</div>
+		</div>
+
+
+
 	</div>
-
-
-  <pre>WECEJ3JKNF239IWQND2390DWKLDFNSALFNWOPFLEFNF9320F32ODFWLKEDM23OP0DF23WDLKSAF230OF932DFSALGNESWALKGNWEIGF3IFBEKJbgfwebglegubqglq4gb934gr vqubvqigahglg349834f9834fsalkgnbsakng34ofaslkeng3ogi34ifjeqwno;ino;i3oif3nfi3o4fn343432953nr923fn32if239ifweklfn	pfHPNGKWGO3GNLWNG;GING3O4IG3OGFNSLEDKNGFDSLKGWELIG3OIG34G43IO4383409F3KFLSEFNSDKGrbrbrebervewECNWECUIEWEWCEWC
-  </pre>
-  </div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-</div>
-</div>
 </body>
 </html>
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/bootstrap.min.js"></script>
 
+<!-- JavaScript 使用 Menu Queries 的 lib -->
+<script src="js/enquire.js"></script>
 
+<!-- 廣告特效 -->
+<script src="js/banner_effect.js"></script>
 <script type="text/javascript">
 	enquire.register("screen and (max-width:45em)", {
 
     // OPTIONAL
     // If supplied, triggered when a media query matches.
     match : function() {
-    	var content = '<div style="width:30px;height:30px; border:1px solid red;"></div>';
-    	$('div.col-xs-6 , .col-md-4').html(content);
+    	// var content = '<div style="width:30px;height:30px; border:1px solid red;"></div>';
+    	$('div.col-xs-6').attr('class', 'col-xs-8 col-md-3');
     },
 
     // OPTIONAL
     // If supplied, triggered when the media query transitions
     // *from a matched state to an unmatched state*.
     unmatch : function() {
-    	var content = '<div style="width:130px;height:130px; border:1px solid blue;"></div>';
-    	$('div.col-xs-6 , .col-md-4').html(content);
+    	// var content = '<div style="width:130px;height:130px; border:1px solid blue;"></div>';
+    	// $('div.col-xs-6 , .col-md-4').html(content);
+    	$('div.col-xs-8').attr('class', 'col-xs-6 col-md-3');
     },
 
     // OPTIONAL
     // If supplied, triggered once, when the handler is registered.
     setup : function() {
-    	$('div.col-xs-6 , .col-md-4').html('setup');
+    	// $('div.col-xs-6 , .col-md-4').html('setup');
     },
 
     // OPTIONAL, defaults to false
@@ -146,7 +130,7 @@
     // If supplied, triggered when handler is unregistered.
     // Place cleanup code here
     destroy : function() {
-    	$('div.col-xs-6 , .col-md-4').html('destroy');
+    	// $('div.col-xs-6 , .col-md-4').html('destroy');
     }
 
 });
