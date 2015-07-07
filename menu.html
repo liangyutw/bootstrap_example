@@ -1,0 +1,181 @@
+<style type="text/css">
+*
+{
+    margin: 0;
+    padding: 0;
+}
+ul, li
+{
+    list-style-type: none;
+}
+#nav li a
+{
+    display: block;
+    padding: 5px 5px 5px 10px;
+}
+#nav > li
+{
+    float: left;
+    width: 220px;
+    border: 1px solid #aaa;
+    padding:10px;
+}
+#nav > li > a
+{
+    background: url('../images/list_icon1.png') no-repeat;
+    font-size: 20px;
+}
+#nav > li > ul
+{
+    display: none;
+}
+#nav > li > ul > li > ul
+{
+    display: none;
+    float: left;
+    border: 1px solid red;
+}
+.lists
+{
+    display: none;
+}
+.show_list_content
+{
+    float: left;
+}
+.sub_list
+{
+    border: 1px solid #aaa;
+    width: 300px;
+    height:300px;
+}
+
+.sub_list > li
+{
+    padding:10px;
+
+}
+</style>
+<div id="main_show">
+    <ul id="nav">
+        <li>
+            Ajax
+            <ul>
+                <li onmouseover="hover('0');" onclick="hover('0');">
+                    <a href="#">Global Ajax Event</a>
+                    <div id="lists0" class="lists">
+                        <ul class="sub_list">
+                            <li>
+                                <a href="#">11</a>
+                            </li>
+                            <li>
+                                <a href="#">22</a>
+                            </li>
+                            <li>
+                                <a href="#">33</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li onmouseover="hover('1');">
+                    <a href="#">Helper Functions</a>
+                    <div id="lists1" class="lists">
+                        <ul class="sub_list">
+                            <li>
+                                <a href="#">44</a>
+                            </li>
+                            <li>
+                                <a href="#">55</a>
+                            </li>
+                            <li>
+                                <a href="#">66</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li onmouseover="hover('2');">
+                    <a href="#">Low-Level Interface</a>
+                    <div id="lists2" class="lists">
+                        <ul class="sub_list">
+                            <li>
+                                <a href="#">77</a>
+                            </li>
+                            <li>
+                                <a href="#">88</a>
+                            </li>
+                            <li>
+                                <a href="#">99</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li onmouseover="hover('3');">
+                    <a href="#">Shorthand Methods</a>
+                    <div id="lists3" class="lists">
+                        <ul class="sub_list">
+                            <li>
+                                <a href="#">aa</a>
+                            </li>
+                            <li>
+                                <a href="#">bb</a>
+                            </li>
+                            <li>
+                                <a href="#">cc</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div id="show_list" class="show_list_content"></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.client.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  // tasks to do if it is a Mobile Device
+  alert("Mobile Detected");
+
+}
+    // var li_mouse = $("#nav li ul li");
+    // alert(li_mouse.length);
+    // for (var i=0; i <= li_mouse.length; i++)
+    // {
+    //     var m_over = $(li_mouse[i]).attr("onmouseover");
+    //     if ($.client.os != "Windows" && m_over != undefined)
+    //     {
+    //         $(li_mouse[i]).attr("onmouseover","onclick")
+    //     }
+    // }
+})
+function hover(k)
+{
+    var _li = $('#nav li').find('ul li');
+    var _li_content = $('div.lists');
+    $("div#show_list").css({"display":"block"});
+    for (var i=0; i <= _li.length; i++)
+    {
+        if (i == k)
+        {
+            var list_content = $(_li_content[k]).html();
+            $("div#show_list").html(list_content);
+        }
+    }
+}
+
+$('#nav li').hover(function () {
+    $(this).children('ul').stop().slideDown(100);
+    $(this).children('a').css({"background-color":"#000","color":"#fff"});
+}, function () {
+    $(this).children('a').css({"background-color":"#fff","color":"#000"});
+    // $(this).children('ul').stop().slideUp(100);
+});
+
+$("div#main_show").mouseleave(function(){
+    $("#show_list").css({"display":"none"});
+    $('#nav li').children('ul').stop().slideUp(100);
+});
+
+</script>

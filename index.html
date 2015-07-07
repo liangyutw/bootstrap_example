@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/less.min.js"></script>
+<script src="js/enquire.js"></script>
+</head>
+<body>
+<div class="container">
+<ul class="nav nav-pills" role="tablist">
+      <li role="presentation" class="active"><a href="#">Regular link</a></li>
+      <li role="presentation" class="dropdown">
+        <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+          <span class="caret"></span>
+        </a>
+        <ul id="menu1" class="dropdown-menu" aria-labelledby="drop4">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+      <li role="presentation" class="dropdown">
+        <a id="drop5" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+          <span class="caret"></span>
+        </a>
+        <ul id="menu2" class="dropdown-menu" aria-labelledby="drop5">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+      <li role="presentation" class="dropdown">
+        <a id="drop6" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+          <span class="caret"></span>
+        </a>
+        <ul id="menu3" class="dropdown-menu" aria-labelledby="drop6">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li role="separator" class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+</div>
+<div id="test"></div>
+</body>
+</html>
+<script type="text/javascript">
+	enquire.register("screen and (max-width:50em)", {
+
+    // OPTIONAL
+    // If supplied, triggered when a media query matches.
+    match : function() {
+    	var content = '<div style="width:30px;height:30px; border:1px solid red;"></div>';
+    	$("div#test").html(content);
+    },
+
+    // OPTIONAL
+    // If supplied, triggered when the media query transitions
+    // *from a matched state to an unmatched state*.
+    unmatch : function() {
+    	var content = '<div style="width:130px;height:130px; border:1px solid blue;"></div>';
+    	$("div#test").html(content);
+    },
+
+    // OPTIONAL
+    // If supplied, triggered once, when the handler is registered.
+    setup : function() {},
+
+    // OPTIONAL, defaults to false
+    // If set to true, defers execution of the setup function
+    // until the first time the media query is matched
+    deferSetup : true,
+
+    // OPTIONAL
+    // If supplied, triggered when handler is unregistered.
+    // Place cleanup code here
+    destroy : function() {}
+
+});
+</script>
