@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="css/banner_effect.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<!-- 開發模式才使用。使用 less 的時候就必須要加這行，注意路徑是否正確 -->
+	<link rel="stylesheet/less" type="text/css" href="css/less/bootstrap.less">
+	<!-- 開發模式才使用。使用 less要加的 lib -->
+	<script>
+	  less = {
+	    env: "development",
+	    async: false,
+	    fileAsync: false,
+	    poll: 1000,
+	    functions: {},
+	    dumpLineNumbers: "comments",
+	    relativeUrls: false,
+	    rootpath: ":"
+	  };
+	  less.watch();
+	</script>
+	<script src="js/less.min.js"></script>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/less.min.js"></script>
-<script src="js/enquire.js"></script>
+	<title>bootstrap practice</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<noscript>
+	<meta http-equiv="refresh" content="0;URL=noscript.html">
+	</noscript>
+
 </head>
 <body>
-<div class="container">
-<ul class="nav nav-pills" role="tablist">
+	<div class="container">
+
+	<ul class="nav nav-pills" role="tablist">
       <li role="presentation" class="active"><a href="#">Regular link</a></li>
       <li role="presentation" class="dropdown">
         <a id="drop4" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -59,41 +83,165 @@
         </ul>
       </li>
     </ul>
-</div>
-<div id="test"></div>
+
+
+		<div id="abgne-block-20120804">
+			<div class="photo">
+				<a href="#">
+					<img src="images/dsc_0342.jpg" alt="第一張圖片">
+					<!-- <div class="desc-block">
+						<div class="desc-bg"></div>
+						<div class="desc-title">每一個都讓人流口水的義式麵包</div>
+					</div>-->
+				</a>
+			</div>
+			<div class="thumbs">
+				<div class="carousel">
+					<ul>
+						<li><a href="#"><img src="images/dsc_0342.jpg" alt="每一個都讓人流口水的義式麵包" title="每一個都讓人流口水的義式麵包"></a></li>
+						<li><a href="#"><img src="images/dsc_0385.jpg" alt="用來垃圾分類的綠寶、白寶、黃寶及藍寶" title="用來垃圾分類的綠寶、白寶、黃寶及藍寶"></a></li>
+						<li><a href="#"><img src="images/dsc_0424.jpg" alt="龐貝城中用來表演用的露天劇場" title="龐貝城中用來表演用的露天劇場"></a></li>
+						<li><a href="#"><img src="images/dsc_0535.jpg" alt="龐貝城中用來祭祀用的神壇" title="龐貝城中用來祭祀用的神壇"></a></li>
+						<li><a href="#"><img src="images/dsc_0595.jpg" alt="Hotel Pazziella 的外觀" title="Hotel Pazziella 的外觀"></a></li>
+						<li><a href="#"><img src="images/dsc_0575.jpg" alt="我來到一個島叫做卡不里島" title="我來到一個島叫做卡不里島"></a></li>
+						<li><a href="#"><img src="images/dsc_0952.jpg" alt="在蘇連多的俏皮神像" title="在蘇連多的俏皮神像"></a></li>
+						<li><a href="#"><img src="images/dsc_1882.jpg" alt="在艾曼紐二世迴廊中的可憐公牛" title="在艾曼紐二世迴廊中的可憐公牛"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearfix" style="margin:15px auto;text-align:center;">
+			<ul>
+				<li style="display:inline-block;margin-right:3px;"><a href="#"><img src="http://c.bookwalker.jp/louis/pc/img/top/button_new.png" alt="電子書籍新着作品"></a></li>
+				<li style="display:inline-block;margin-right:3px;"><a href="#"><img src="http://c.bookwalker.jp/louis/pc/img/top/button_campaign.png" alt="キャンペーン一覧"></a></li>
+				<li style="display:inline-block;margin-right:3px;"><a href="#"><img src="http://c.bookwalker.jp/louis/pc/img/top/button_special.png" alt="電子書籍特集一覧"></a></li>
+				<li style="display:inline-block;" class="last"><a href="#"><img src="http://c.bookwalker.jp/louis/pc/img/top/button_newrelease.png" alt="電子書籍配信予定リスト"></a></li>
+			</ul>
+		</div>
+
+		<div class="clearfix" style="margin:15px auto;text-align:center;">
+		<ul>
+			<li style="display:inline-block;margin-right:3px;border:1px solid blue;">
+				<img src="images/dsc_0342.jpg" width="150px" height="300px">
+				<img src="images/dsc_0342.jpg" width="150px" height="300px">
+				<img src="images/dsc_0342.jpg" width="150px" height="300px">
+			</li>
+			<li style="display:inline-block;margin-right:3px;border:1px solid blue;">
+				<img src="images/dsc_0342.jpg" width="150px" height="300px">
+				<img src="images/dsc_0342.jpg" width="150px" height="300px">
+				<img src="images/dsc_0342.jpg" width="150px" height="300px">
+			</li>
+		</ul>
+		</div>
+
+		<div class="clearfix"></div>
+		<div id="top_link" style="position: fixed; bottom:10px;right:3px; border:1px solid red;display:none;">
+			<a href="#" class="goTop">Go To Header</a>
+		</div>
+
+	</div> <!-- container end -->
+
+	<div class="container-fluid">
+		<!-- <div style="height:1000px;border:1px solid red;"></div> -->
+	<div class="row">
+		<div class="col-md-8" style="border:1px solid red;">
+			<div style="display:inline-block; vertical-align:top; width:150px; border:1px solid green;">
+				<ul style="padding:0px;margin:0px;">
+					<li style="list-style-type: none; text-align: left;">123</li>
+					<li style="list-style-type: none; text-align: left;">456</li>
+					<li style="list-style-type: none; text-align: left;">789</li>
+				</ul>
+			</div>
+			<div style="display:inline-block; vertical-align:top; width:150px; border:1px solid green;">
+				<ul style="padding:0px;margin:0px;">
+					<li style="list-style-type: none; text-align: left;">123</li>
+					<li style="list-style-type: none; text-align: left;">654</li>
+				</ul>
+			</div>
+			<div style="display:inline-block; vertical-align:top; width:150px; border:1px solid green;">
+				<ul style="padding:0px;margin:0px;">
+					<li style="list-style-type: none; text-align: left;">123</li>
+					<li style="list-style-type: none; text-align: left;">987</li>
+				</ul>
+			</div>
+			<div style="display:inline-block; vertical-align:top; width:150px; border:1px solid green;">
+				<ul style="padding:0px;margin:0px;">
+					<li style="list-style-type: none; text-align: left;">123</li>
+					<li style="list-style-type: none; text-align: left;">000</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-4" style="border:1px solid red;">
+			<div style="display:inline-block; vertical-align:top; width:150px;">
+				<ul style="padding:0px;margin:0px;">
+					<li style="list-style-type: none; text-align: left;">123</li>
+					<li style="list-style-type: none; text-align: left;">000</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
 </body>
 </html>
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- JavaScript 使用 Menu Queries 的 lib -->
+<!-- <script src="js/enquire.js"></script> -->
+
+<!-- 廣告特效 -->
+<script src="js/banner_effect.js"></script>
 <script type="text/javascript">
-	enquire.register("screen and (max-width:50em)", {
 
-    // OPTIONAL
-    // If supplied, triggered when a media query matches.
-    match : function() {
-    	var content = '<div style="width:30px;height:30px; border:1px solid red;"></div>';
-    	$("div#test").html(content);
-    },
-
-    // OPTIONAL
-    // If supplied, triggered when the media query transitions
-    // *from a matched state to an unmatched state*.
-    unmatch : function() {
-    	var content = '<div style="width:130px;height:130px; border:1px solid blue;"></div>';
-    	$("div#test").html(content);
-    },
-
-    // OPTIONAL
-    // If supplied, triggered once, when the handler is registered.
-    setup : function() {},
-
-    // OPTIONAL, defaults to false
-    // If set to true, defers execution of the setup function
-    // until the first time the media query is matched
-    deferSetup : true,
-
-    // OPTIONAL
-    // If supplied, triggered when handler is unregistered.
-    // Place cleanup code here
-    destroy : function() {}
-
+//螢幕滑下後顯示 gotop 圖案
+$(function(){
+	var _btnPagetop = $('#top_link');
+	$(_btnPagetop).hide();
+	$(window).scroll(function () {
+		if($(window).scrollTop() > 200) {
+			$(_btnPagetop).fadeIn('1000');
+		}else{
+			$(_btnPagetop).fadeOut('1000');
+		}
+	});
 });
+
+//點擊移到最上面效果
+$(function(){
+	// 幫 a.goTop 加上 click 事件
+	$('a.goTop').click(function(){
+		// 讓捲軸用動畫的方式移動到 #header 的 top 位置
+		// 並加入動畫效果
+		// 感謝網友 sam 修正 Opera 問題
+		var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+		$body.animate({
+			scrollTop: 0
+		}, 1000);
+
+		return false;
+	});
+});
+
+
+//用js針對 rwd 做隱藏、顯示
+// enquire.register("screen and (max-width:1000px)", {
+// 	match : function() {
+// 	},
+
+// 	unmatch : function() {
+// 	},
+
+// 	setup : function() {
+// 	},
+
+// 	deferSetup : true,
+
+// 	destroy : function() {
+// 	}
+// });
+
+>>>>>>> 7b5e904cc9dfde842a8ef4eface86c1f25bcc2fb
 </script>
