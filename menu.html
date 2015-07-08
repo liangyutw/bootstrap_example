@@ -11,12 +11,12 @@ ul, li
 #nav li a
 {
     display: block;
-    padding: 5px 5px 5px 10px;
+    padding: 20px;
 }
 #nav > li
 {
     float: left;
-    width: 220px;
+    width: 15%;
     border: 1px solid #aaa;
     padding:10px;
 }
@@ -46,22 +46,45 @@ ul, li
 .sub_list
 {
     border: 1px solid #aaa;
-    width: 300px;
-    height:300px;
+    width: auto;
+    height:40%;
+    float: left;
 }
 
-.sub_list > li
+.sub_list > li , a
 {
-    padding:10px;
+    padding:15px;
+}
+.sub_list a:hover
+{
+    background-color:#000;
+    color:#fff;
+}
 
+#toggle {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    border: 1px solid #000;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.img_icon
+{
+    padding: 30px;
+    cursor: pointer;
 }
 </style>
+<img id="img7" class="img_icon" src="images/icon-menu-black.png" width="64" height="64">
+<div id="toggle"></div>
+<h2><a href="index.html">index</a></h2> <span id="device"></span>
 <div id="main_show">
     <ul id="nav">
         <li>
             Ajax
             <ul>
-                <li onmouseover="hover('0');" onclick="hover('0');">
+                <li onmouseover="hover('0');">
                     <a href="#">Global Ajax Event</a>
                     <div id="lists0" class="lists">
                         <ul class="sub_list">
@@ -73,6 +96,26 @@ ul, li
                             </li>
                             <li>
                                 <a href="#">33</a>
+                            </li>
+                            <li>
+                                <a href="#">99</a>
+                            </li>
+                            <li>
+                                <a href="#">88</a>
+                            </li>
+                        </ul>
+                        <ul class="sub_list">
+                            <li>
+                                <a href="#">77</a>
+                            </li>
+                            <li>
+                                <a href="#">66</a>
+                            </li>
+                            <li>
+                                <a href="#">55</a>
+                            </li>
+                            <li>
+                                <a href="#">44</a>
                             </li>
                         </ul>
                     </div>
@@ -130,26 +173,45 @@ ul, li
     </ul>
     <div id="show_list" class="show_list_content"></div>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.client.js"></script>
+<script src="js/jquery.rotate.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-  // tasks to do if it is a Mobile Device
-  alert("Mobile Detected");
+    //檢查手機裝置
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        // tasks to do if it is a Mobile Device
+        $("#device").text("(Mobile Detected)");
+    }
 
-}
-    // var li_mouse = $("#nav li ul li");
-    // alert(li_mouse.length);
-    // for (var i=0; i <= li_mouse.length; i++)
-    // {
-    //     var m_over = $(li_mouse[i]).attr("onmouseover");
-    //     if ($.client.os != "Windows" && m_over != undefined)
-    //     {
-    //         $(li_mouse[i]).attr("onmouseover","onclick")
-    //     }
-    // }
+    //旋轉圖片 + 打開選單
+    var value2 = 0
+    $("#img7").rotate({
+       bind:
+         {
+            click: function(){
+                value2 += 90;
+                var quotient = Math.floor(value2/90); //取商數
+                var remainder = quotient%2; //取餘數
+
+                //餘數不等於 0 就是打開選單，變換icon
+                if (remainder != 0)
+                {
+                    $(this).attr("src","images/close.png").rotate({ animateTo: 90})
+                    $( "#toggle" ).toggle( "slide" ).css({"display":"block"});
+                }
+                else
+                {
+                    $(this).attr("src","images/icon-menu-black.png").rotate({ animateTo:0})
+                    $( "#toggle" ).toggle( "slide" );
+                }
+            }
+         }
+    });
+
 })
+
 function hover(k)
 {
     var _li = $('#nav li').find('ul li');

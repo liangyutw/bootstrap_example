@@ -1,5 +1,5 @@
 #abgne-block-20120804 {
-	width: 900px;	/* 圖片寬度 + 縮圖寬度 + 間隔 8px */
+	width: 100%;	/* 圖片寬度 + 縮圖寬度 + 間隔 8px */
 	height: 300px;	/* 圖片高度 */
 	/*padding: 6px 10px;*/
 	margin: auto;
@@ -15,7 +15,7 @@
 	border: none;
 }
 #abgne-block-20120804 .photo {
-	width: 450px;	/* 圖片寬度 */
+	width: 45%;	/* 圖片寬度 */
 	height: 300px;	/* 圖片高度 */
 	position: absolute;
 }
@@ -23,12 +23,12 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	width: 450px;	/* 圖片寬度 */
+	width: 45%;	/* 圖片寬度 */
 	height: 32px;
 }
 #abgne-block-20120804 .desc-bg, #abgne-block-20120804 .desc-title {
 	position: absolute;
-	width: 430px;	/* 圖片寬度 - padding * 2 */
+	width: 45%;	/* 圖片寬度 - padding * 2 */
 	background: #000;
 	top: 0;
 	height: 24px;
